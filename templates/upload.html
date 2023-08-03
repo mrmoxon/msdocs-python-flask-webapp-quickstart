@@ -1,0 +1,52 @@
+<!-- <!doctype html>
+<head>
+    <title>Get ATS Ready with AutoCV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='bselected.ico') }}"> 
+</head>
+<html>
+   <body>
+     <main>
+        <div class="px-4 py-3 my-2 text-center">
+            <div style="width: 72px; height: 57px;"></div>
+
+            <h1 class="display-6 fw-bold">{{role}}</h1>
+            <p class="fs-5">
+                Making CV ATS ready...
+            </p>
+            <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg px-4 gap-3">Back home</a>
+          </div>
+     </main>      
+   </body>
+</html> -->
+
+<!doctype html>
+<head>
+    <title>Get ATS Ready with AutoCV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='bselected.ico') }}"> 
+</head>
+<html>
+   <body>
+     <main>
+            <!-- FLASH MESSAGES -->
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <div class=flashes>
+                  {% for message in messages %}
+                  {{ message }}
+                  {% endfor %}
+                </div>
+              {% endif %}
+            {% endwith %}
+
+            <div class="px-4 py-3 my-2 text-center">
+            <h1 class="display-6 fw-bold">{{role}}</h1>
+            <p class="fs-5">
+                Making CV ATS ready...
+            </p>
+            <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg px-4 gap-3">Next Upload</a>
+          </div>
+     </main>      
+   </body>
+</html>
